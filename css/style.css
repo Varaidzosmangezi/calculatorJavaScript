@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,20%);
+    grid-template-rows: minmax(120px, auto )repeat(5, 100px);
+}
+.calculator > button {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.calculator > button:hover {
+    opacity: 75%;
+
+}
+.calculator button:hover {
+    color: whitesmoke;
+}
+.display {
+    grid-column: 1 / -1;
+    background-color: #07262d;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.display .previous-operand {
+    color: rgb(102, 117, 131);
+}
+.display .current-operand {
+    color: white;
+}
+.all-clear {
+    grid-column: span 2;
+    background-color: #832416;
+    color: white;
+}
+.delete {
+    background-color: #832416;
+    color: white;
+}
+.equal-to {
+    grid-column: span 2;
+    background-color: rgb(18, 65, 18);
+    color: white;
+}
+.digits {
+    background-color: #0c3f4b;
+    color: white;
+}
+.operators {
+    background-color: #ec6804fb;
+    color: white;
+}
