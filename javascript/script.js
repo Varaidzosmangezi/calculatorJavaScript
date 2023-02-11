@@ -53,7 +53,7 @@ class Calculator {
                     break;
                 case '/':
                     if (floatCurrentOperand === 0){
-                        this.currentOperand = '';
+                        this.currentOperand = `Oh no! you can't divide by zero`;
                         this.previousOperand = '';
                         this.operator = undefined;
                         return
@@ -74,7 +74,7 @@ class Calculator {
     }
    
     delete () {
-        this.currentOperand = this.currentOperand.slice(0,-1);
+        this.currentOperand = this.currentOperand.toString().slice(0,-1);
 
     }
 }
