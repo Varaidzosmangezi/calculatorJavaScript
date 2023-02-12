@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 700px) {
+    header {
+        background-color: #07262d;
+        height: 80px;
+        width: 100%;
+        position: sticky;
+    }
+    label.logo {
+        color: white;
+        font-size: 20px;
+        line-height: 85px;
+        padding: 0 5px}
+    nav ul {
+        float: right;
+        margin-right: 5px;
+    }
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px 0 5px;
+    }
+    nav ul li a{
+        color: white;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    main #youtube {
+        display: flex;
+        height: 15h;
+        width: 90%;
+        height: 380px;
+        background: #07262d;
+        justify-content: center;
+    }
+    #youtube iframe {
+        width: 60%;
+        height: 315;
+    }
+    #howToInfo {
+        display: flex;
+        border: 5px solid #07262d ;
+        width: 95%;
+        min-height: 60vh;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    #howToInfo img {
+        width: 60%;
+        height: 300px;
+        margin: 5px 0 0 0;
+        align-self: center;
+    }
+    #howToInfo figcaption {
+        font-size: small;
+    }
+    main a {
+        color: #07262d;
+        text-transform: uppercase;
+        margin-top: 3px;
+    }
+
+}
+@media only screen and (min-width: 710px) {
+    header {
+        background-color: #07262d;
+        height: 150px;
+        width: 100%;
+        position: sticky;
+    }
+    label.logo {
+        color: white;
+        font-size: 45px;
+        line-height: 150px;
+        padding: 0 5%}
+    nav ul {
+        float: right;
+        line-height: 150px;
+        margin-right: 1px5;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px 0 10px;
+    }
+    nav ul li a{
+        color: white;
+        font-size: 23px;
+        text-decoration: none;
+    }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+main #youtube {
+    display: flex;
+    height: 15h;
+    width: 500px;
+    height: 380px;
+    background: #07262d;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+#youtube iframe {
+    
+    width: 420;
+    height: 315;
+}
+#howToInfo {
+    display: flex;
+    border: 5px solid #07262d ;
+    width: 95%;
+    min-height: 60vh;
+    margin-top: 20px;
+    justify-content: center;
+}
+#howToInfo img {
+    width: 420px;
+    height: 415px;
+    margin: 5px 0 0 0;
+}
+#howToInfo figcaption {
+    font-size: large;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+main a {
+    color: #07262d;
+    text-transform: uppercase;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+}

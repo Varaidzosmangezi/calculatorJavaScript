@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../javascript/script.js" defer></script>
-    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Calculator-Tutorials</title>
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <div class="previous-operand"></div>
-            <div class="current-operand"></div>
-        </div>
-        <button class="all-clear" id="allClear"> AC </button>
-        <button class="delete" id="delete"> DEL</button>
-        <button class="operators" id="/"> / </button>
-        <button class="digits" id="7"> 7 </button>
-        <button class="digits" id="8"> 8 </button>
-        <button class="digits" id="9"> 9 </button>
-        <button class="operators" id="*"> * </button>
-        <button class="digits" id="4"> 4 </button>
-        <button class="digits" id="5"> 5 </button>
-        <button class="digits" id="6"> 6 </button>
-        <button class="operators" id="-"> - </button>
-        <button class="digits" id="1"> 1 </button>
-        <button class="digits" id="2"> 2 </button>
-        <button class="digits" id="3"> 3 </button>
-        <button class="operators" id="+"> + </button>
-        <button class="digits" id="0"> 0 </button>
-        <button class="digits" id="."> . </button>
-        <button class="equal-to" id="="> = </button>
-    </div>
+    <header>
+        <nav>
+            <label class="logo"><strong>CalculatorX</strong></label>
+            <ul>
+                <li>
+                    <a href=""><strong>Calculator-Tutorials</strong></a>
+                </li>
+                <li>
+                    <a href="./pages/calculatorpage.html"><strong>Calculator</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id ="top">
+        <section id = "youtube">
+            <iframe
+                src="https://www.youtube.com/embed/szzm_Q9guo0?autoplay=1&mute=1">
+            </iframe>
+        </section>
+        <section id = "howToInfo">
+            <figure>
+                <img src="./images/myCalculator.png"
+                alt="This is a picture of the calculator that you will be using in the next page.">
+                <figcaption>
+                    <strong>The calculator above has four operations:</strong>
+                    <ol>
+                        <li>division /</li>
+                        <li> multiplication *</li>
+                        <li>subtraction -</li>
+                        <li>addition +</li>
+                    </ol>
+                    <strong>It has the following capabilities:</strong>
+                    <ul>
+                        <li>Ability to clear all operands</li>
+                        <li>Ability to delete one item at a time</li>
+                        <li>Ability display previous and current operands</li>
+                    </ul>
+                    </figcaption>
+            </figure>
+        </section>
+        <a href="#top"><strong>Back to top</strong></a>
+    </main>
 </body>
 </html>

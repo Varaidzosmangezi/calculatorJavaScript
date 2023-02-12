@@ -21,7 +21,6 @@ class Calculator {
     appendNumber (number) {
         if (number === '.' && this.currentOperand.includes('.'))return;
         this.currentOperand += number;
-        console.log(this.currentOperand)
     }
     chooseOperator (operator) {
         if (this.currentOperand ==='') {
@@ -31,25 +30,26 @@ class Calculator {
             this.operate ();
         }
         this.operator = operator;
-        console.log(this.operator)
+       if (this.previousOperand.includes(operator))return
         this.previousOperand = this.currentOperand + this.operator;
         this.currentOperand = ''
     }
-    operate () {
-        let answer;
+    
+    operate (answer) {
         const floatCurrentOperand = parseFloat(this.currentOperand);
         const floatPreviousOperand = parseFloat(this.previousOperand);
-        console.log(floatCurrentOperand , floatPreviousOperand)
+        (floatCurrentOperand , floatPreviousOperand)
         if (isNaN(floatPreviousOperand) || isNaN(floatCurrentOperand)) return
             switch (this.operator) {
                 case '+':
-                    answer = floatPreviousOperand + floatCurrentOperand;
+                    this.addition(floatPreviousOperand,floatCurrentOperand);
+                    (floatCurrentOperand, floatPreviousOperand)
                     break;
                 case '-':
-                    answer = floatPreviousOperand - floatCurrentOperand;
+                    this.subtraction(floatPreviousOperand,floatCurrentOperand);
                     break;
                 case '*':
-                    answer = floatPreviousOperand * floatCurrentOperand;
+                    this.multiplication(floatPreviousOperand,floatCurrentOperand);
                     break;
                 case '/':
                     if (floatCurrentOperand === 0){
@@ -58,21 +58,42 @@ class Calculator {
                         this.operator = undefined;
                         return
                     }
-                    answer = floatPreviousOperand / floatCurrentOperand;
+                    this.division (floatPreviousOperand,floatCurrentOperand);
                     break;
                 default:
                     return
         }
-        this.currentOperand = answer;
         this.previousOperand = ''
         this.operation = undefined;
+    }
+
+    addition(a,b) {
+        let answer = 0
+        answer = a + b;
+        this.currentOperand = answer;
+    }
+    subtraction (a,b) {
+        let answer = 0
+        answer = a - b;
+        this.currentOperand = answer;
+    }
+    multiplication (a,b) {
+        let answer = 0
+        answer = a * b;
+        this.currentOperand = answer;
+    }
+    division (a,b) {
+        if (b === 0) return;
+        let answer = 0
+        answer = a / b;
+        this.currentOperand = answer;
     }
 
     updateDisplay (){
         currentOperandDisplay.textContent = this.currentOperand;
         previousOperandDisplay.textContent = this.previousOperand ;
     }
-   
+    
     delete () {
         this.currentOperand = this.currentOperand.toString().slice(0,-1);
 
