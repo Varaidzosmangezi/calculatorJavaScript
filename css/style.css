@@ -71,3 +71,8 @@ a {
     background-color: #ec6804fb;
     color: white;
 }
+form button {
+    background-color: #07262d;
+    color: white;
+    margin: 20px 30px;
+}

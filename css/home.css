@@ -12,6 +12,8 @@ body {
         height: 80px;
         width: 100%;
         position: sticky;
+        top: 0;
+        z-index: 999;
     }
     label.logo {
         color: white;
@@ -142,7 +144,7 @@ main #youtube {
     padding: 10px;
 }
 main a {
-    color: #07262d;
+    color: #ec6804fb;
     text-transform: uppercase;
     margin-top: 3px;
     margin-bottom: 5px;
