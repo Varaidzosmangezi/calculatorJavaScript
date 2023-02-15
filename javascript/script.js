@@ -13,7 +13,7 @@ let operation = '';
 function appendNumber (number) {
     if(number === '.'&& currentOperand.includes('.') ) return
     if(currentOperand[0] === '0' && number ==='0' && currentOperand.length === 1) return
-    if(currentOperand.length > 12)return
+    if(currentOperand.length > 8)return
     let appendedNum = currentOperand + number;
     currentOperand = appendedNum;
     return currentOperand
